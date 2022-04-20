@@ -67,16 +67,20 @@ export const quantityOfSymbols = (string, symbol) => {
  * @returns {number}
  */
 export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
-    symbol = symbol.toLowerCase;
-    let conter = 0;
-    let res = string.toLowerCase().indexOf(symbol);
+    symbol = symbol.toLowerCase();
+    string = string.toLowerCase();
+    let num = 0;
+   let res = string.indexOf(symbol);
     
     while(true){
-      if (conter === -1)
-           break
-    } res = string.toLowerCase().indexOf(symbol, res +1);
+      if (res === -1){
+           break;
+    } 
+    res = string.indexOf(symbol, res +1);
+    num ++;
+}
     
-    return conter;
+    return num;
 };
        
     
